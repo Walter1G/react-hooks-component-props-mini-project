@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 function About({ src = "https://via.placeholder.com/215", about }) {
 
