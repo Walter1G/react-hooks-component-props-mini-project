@@ -4,8 +4,16 @@ import blogData from "../data/blog";
 
 
 
-function ArticleList({ posts }) {
+function ArticleList({ list }) {
 
+
+    const articleList = (list).map(article => (
+        <li key={article.id}>
+            <Article title={article.title} date={article.date} preview={article.preview} />
+        </li>
+    )
+
+    )
 
 
 
@@ -13,11 +21,11 @@ function ArticleList({ posts }) {
 
 
         <main>
-            {posts.map(article =>
 
-                (<Article key={article.id} title={article.title} date={article.date} preview={article.preview} />)
 
-            )}
+            {articleList}
+
+
 
 
 
